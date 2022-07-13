@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/gusbdev/react-dashboard-financial/issues"
   },
-  "homepage": "https://github.com/gusbdev/react-dashboard-financial#readme"
+  "homepage": "https://github.com/gusbdev/react-dashboard-financial#readme",
+  "devDependencies": {
+    "git-commit-msg-linter": "^4.1.3"
+  }
 }
