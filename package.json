@@ -1,0 +1,24 @@
+{
+  "name": "react-dashboard-financial",
+  "version": "1.0.0",
+  "description": "Dashboard for financial controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gusbdev/react-dashboard-financial.git"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "dashboard"
+  ],
+  "author": "Gustavo Barbosa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gusbdev/react-dashboard-financial/issues"
+  },
+  "homepage": "https://github.com/gusbdev/react-dashboard-financial#readme"
+}
