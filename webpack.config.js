@@ -22,26 +22,16 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-            options: {
-              modules: true,
-            },
-          },
-          {
-            loader: "sass-loader",
-          },
-        ],
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
   devServer: {
-    contentBase: "./public",
-    writeToDisk: true,
+    static: "./public",
+    devMiddleware: {
+      writeToDisk: true,
+    },
     historyApiFallback: true,
   },
   externals: {
