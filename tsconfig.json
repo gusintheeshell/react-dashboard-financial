@@ -16,5 +16,5 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["src"]
+  "include": ["src", "src/custom.d.ts", "src/react-app-env.d.ts"]
 }
