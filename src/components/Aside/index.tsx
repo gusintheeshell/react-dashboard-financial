@@ -5,17 +5,11 @@ import {
   MdArrowUpward,
   MdExitToApp,
 } from "react-icons/md"
+import { Link } from "react-router-dom"
 
 import logoImg from "@/assets/logo.svg"
 
-import {
-  Container,
-  Header,
-  Title,
-  LogoImg,
-  MenuContainer,
-  MenuItemLink,
-} from "./styles"
+import { Container, Header, Title, LogoImg, MenuContainer } from "./styles"
 
 const Aside: React.FC = () => {
   return (
@@ -26,22 +20,22 @@ const Aside: React.FC = () => {
       </Header>
 
       <MenuContainer>
-        <MenuItemLink href="#">
+        <Link to="/dashboard">
           <MdDashboard />
           Dashboard
-        </MenuItemLink>
-        <MenuItemLink href="#">
+        </Link>
+        <Link to="/list/entry-balance">
           <MdArrowUpward />
           Entradas
-        </MenuItemLink>
-        <MenuItemLink href="#">
+        </Link>
+        <Link to="/list/exit-balance">
           <MdArrowDownward />
           Saídas
-        </MenuItemLink>
-        <MenuItemLink href="#">
+        </Link>
+        <Link to="#">
           <MdExitToApp />
           Sair
-        </MenuItemLink>
+        </Link>
       </MenuContainer>
     </Container>
   )
