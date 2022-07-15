@@ -23,6 +23,9 @@ interface IData {
 
 const List: React.FC = () => {
   const [data, setData] = useState<Array<IData>>([])
+  const [monthSelected, setMonthSelected] = useState<string>("")
+  const [yearSelected, setYearSelected] = useState<string>("")
+
   const { type } = useParams()
 
   const listData = useMemo(() => {
@@ -78,8 +81,14 @@ const List: React.FC = () => {
   return (
     <Container>
       <ContentHeader title={title} lineColor={lineColor}>
-        <SelectInput options={months} />
-        <SelectInput options={years} />
+        <SelectInput
+          options={months}
+          onChange={(e) => setMonthSelected(e.target.value)}
+        />
+        <SelectInput
+          options={years}
+          onChange={(e) => setYearSelected(e.target.value)}
+        />
       </ContentHeader>
 
       <Filters>
