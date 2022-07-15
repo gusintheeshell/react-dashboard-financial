@@ -9,6 +9,9 @@ import { Container, Content, Filters } from "./styles"
 import gains from "@/repositories/gains"
 import expenses from "@/repositories/expenses"
 
+import formatCurrency from "@/utils/formatCurrency"
+import formatDate from "@/utils/formatDate"
+
 interface IData {
   id: string
   description: string
@@ -58,13 +61,12 @@ const List: React.FC = () => {
   useEffect(() => {
     const response = listData.map(
       ({ description, frequency, amount, date, type }) => {
-        console.log(type)
         return {
           id: String(Math.random() * data.length),
           description,
-          formattedAmount: amount,
+          formattedAmount: formatCurrency(Number(amount)),
           frequency,
-          formattedDate: date,
+          formattedDate: formatDate(date),
           tagColor: frequency === "recorrente" ? "#4E41F0" : "#E66C4E",
         }
       }
