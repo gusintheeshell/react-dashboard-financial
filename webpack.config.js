@@ -29,6 +29,11 @@ module.exports = {
         test: /\.svg$/,
         loader: "svg-inline-loader",
       },
+      {
+        test: /\.js$/,
+        enforce: "pre",
+        use: ["source-map-loader"],
+      },
     ],
   },
   devServer: {
